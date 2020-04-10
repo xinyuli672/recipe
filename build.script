@@ -1,0 +1,23 @@
+curl -d "{\"content\":\"Build ${BUILD_TAG} started for commit ${GIT_COMMIT}\"}" -H "Content-Type: application/json" -X POST https://discordapp.com/api/webhooks/501897940885831680/P44E89ircGI7s77NjOyPuimNtFGYefch8CvIqIgvmh_kO6fM0NpixcSMdIRqWAOvrkL2
+
+echo "Compressing files"
+tar -czf recipe-frontend.tar.gz *
+
+# Build and Test here as desired
+#echo "Building"
+#npm install
+
+
+cp recipe-frontend.tar.gz /tmp/
+
+# Save node modules
+mv ~/recipe-frontend/node_modules /tmp/
+rm -rf ~/recipe-frontend/*
+mv /tmp/node_modules ~/recipe-frontend/
+
+mv /tmp/recipe-frontend.tar.gz ~/recipe-frontend/
+cd ~/recipe-frontend && tar -zxf recipe-frontend.tar.gz && npm install
+cd ~/recipe-frontend && npm run build 
+sudo forever stop 0 || true
+sudo forever start -c "serve -l tcp://0.0.0.0:80" ~/recipe-frontend/build
+curl -d '{"content":"Build complete. Frontend Link: http://104.248.220.214"}' -H "Content-Type: application/json" -X POST https://discordapp.com/api/webhooks/501897940885831680/P44E89ircGI7s77NjOyPuimNtFGYefch8CvIqIgvmh_kO6fM0NpixcSMdIRqWAOvrkL2

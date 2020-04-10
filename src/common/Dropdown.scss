@@ -1,0 +1,22 @@
+@import "../_style/global.scss";
+
+.dd {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    min-width: 200px;
+    background-color: rgb(252, 252, 252);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    padding: 14px;
+    right: 0;
+
+    .category {
+        color: #B4B8C1;
+    }
+
+    .items {
+        color: black;
+    }
+}

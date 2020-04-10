@@ -1,0 +1,106 @@
+.spacing-base {
+
+    margin-bottom: 14px;
+
+}
+#primary-container {
+    padding-top: 5%;
+    width: 50%;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+.title{
+    width:50%;
+}
+#notify {
+    /* display: none; */
+    min-height: 40px;
+}
+
+#center {
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+}
+
+
+#line {
+    border: 1px #888888 solid;
+    margin: 20px 0;
+}
+
+.margin {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.home-page-margin{
+    margin-top: 5%;
+}
+.profile-name-td {
+    height: 40px;
+    padding: 0 !important;
+}
+
+.profile-name {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    display: block;
+    border: none;
+    border-radius: 0;
+}
+
+.step-numbering {
+    width:10%;
+    float:left;
+    display:inline;
+}
+
+.step-input {
+    width:85%;
+    float:left;
+    display:inline;
+    margin-top: 10px
+}
+
+.ingredient-input {
+    width:100%;
+    float:left;
+    display:inline;
+    margin-top: 10px;
+}
+
+.ingredient-button {
+    width:75%;
+    margin-top: 10px;
+    display: inline-block
+}
+
+.step-table {
+    width:100%;
+}
+
+.make-recipe-margin {
+    margin-top: 5%;
+}
+
+.center{
+    width: auto !important;
+}
+
+.create-recipe-button-div{
+    width:100%;
+    height: 100px;
+    align-items: center;
+}
+
+.create-recipe-button{
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: center;
+}
