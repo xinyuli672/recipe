@@ -11,7 +11,7 @@
     "email-validator": "^2.0.4",
     "i": "^0.3.6",
     "node-sass": "^4.10.0",
-    "npm": "^6.4.1",
+    "npm": "^9.8.0",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-redux": "^5.1.1",
